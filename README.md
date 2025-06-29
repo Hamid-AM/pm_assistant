@@ -17,12 +17,12 @@ All done through AI agents using structured prompts, tool integration, and task 
 ```
 pm_assistant/
 │
-├── knowledge/                # Domain context & user feedback
-│   ├── product_context.md #example of product context file
-│   ├── kapsul_user_feedback.md #example of product feedback file
+├── knowledge/                   # Domain context & user feedback
+│   ├── product_context.md       #example of product context file
+│   ├── kapsul_user_feedback.md  #example of product feedback file
 │   └── user_preference.txt
 │
-├── src/pm_assistant/         # Core application logic
+├── src/pm_assistant/            # Core application logic
 │   ├── config/
 │   │   ├── agents.yaml
 │   │   └── tasks.yaml
@@ -32,7 +32,7 @@ pm_assistant/
 │   │   └── test_serper_tool.py
 │   ├── crew.py
 │   ├── main.py
-│   └── final_report.md       # Output file
+│   └── final_report.md          # Output file
 │
 ├── requirements.txt
 ├── pyproject.toml
