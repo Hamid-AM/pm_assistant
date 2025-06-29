@@ -91,10 +91,11 @@ python main.py \
 During the Market Research task:
 The assistant hardcodes a search for 5 relevant links using the SerperSearchTool.
 From these 5 links, it selects the 3 most relevant URLs based on content quality and alignment with the product goal.
-It then scrapes and analyzes only those 3 URLs to extract competitive insights such as:
-Product features
-Pricing (if available)
-Unique market positioning
+- It then scrapes and analyzes only those 3 URLs to extract competitive insights such as:
+- Product features
+- Pricing (if available)
+- Unique market positioning
+  
 This behavior is currently not configurable via CLI flags but can be changed in code (max_urls=3 logic inside crew.py and 5 urls in the tasks.yaml).
 
 ## Features
