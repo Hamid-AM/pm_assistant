@@ -1,0 +1,67 @@
+market_research:
+  agent: market_analyst
+  description: >
+    Research the current competitive landscape related to the product goal: "{pm_goal}".\n
+    Step 1: Use SerperSearchTool to retrieve at least {max_urls} relevant URLs pointing to companies, tools, or platforms addressing similar needs.\n
+    Step 2: Select the top {max_urls} URLs based strictly on relevance and product similarity.\n
+    Step 3: Use ScrapeWebsiteTool to extract structured content from each selected URL.\n
+    Step 4: For each competitor, summarize the following:
+      - Core product features
+      - Pricing model (if available)
+      - Unique positioning or value proposition\n
+    Clearly list all URLs consulted and explain why each was selected.\n
+    Use only URLs obtained from SerperSearchTool — do not rely on prior knowledge.
+  expected_output: >
+    A structured competitive analysis of 3 relevant companies, including:
+      - Competitor name
+      - Website URL used
+      - Feature breakdown
+      - Pricing overview
+      - Key differentiators
+
+user_feedback:
+  agent: user_analyst
+  description: >
+    Analyze qualitative user feedback from the file "{feedback_file}" in the context of the product goal: "{pm_goal}".\n
+    Use FileReadTool to extract and read the raw feedback content.\n
+    Identify common pain points, requests, and emerging user needs.\n
+    Categorize insights into thematic groups (e.g. UX issues, performance, privacy, engagement, etc.).\n
+    Conclude by crafting at least 3 "How Might We..." (HMW) problem statements inspired by user sentiment.\n
+    Format response as: Thought → Action → Action Input → Observation → Final Answer.
+  expected_output: >
+    - A breakdown of user feedback themes
+    - A list of top user pain points and feature requests
+    - At least 3 clear "How Might We..." questions that could guide ideation
+
+write_requirements:
+  agent: doc_writer
+  description: >
+    Based on the market and user insight tasks, synthesize product requirements that directly support the PM goal: "{pm_goal}".\n
+    Write 5–7 user stories using this format:
+      "As a [persona], I want to [action], so that [benefit]."\n
+    Each story must include:
+      - Acceptance Criteria (bullet list)
+      - Technical or functional implications (if applicable)
+  expected_output: >
+    A structured list of user stories with:
+      - Clear personas
+      - Acceptance criteria
+      - Initial functional requirement notes
+
+final_report:
+  agent: product_strategist
+  description: >
+    Consolidate the outputs of previous tasks into a cohesive strategy document addressing the product goal: "{pm_goal}".\n
+    The final report must include:
+      - Executive summary
+      - Competitive landscape (from market analyst)
+      - User insights and themes (from user analyst)
+      - Validated user stories and initial requirements (from doc writer)
+      - Strategic product recommendations
+  expected_output: >
+    A well-structured product discovery report with all key sections:
+      - Executive Summary
+      - Market Research Summary
+      - User Feedback Synthesis
+      - Product Requirements Draft
+      - Strategic Recommendations & Next Steps

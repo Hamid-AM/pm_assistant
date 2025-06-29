@@ -1,0 +1,7 @@
+crewai==0.134.0
+langchain==0.3.26
+openai
+beautifulsoup4
+requests
+python-dotenv
+crewai-tools
