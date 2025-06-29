@@ -2,7 +2,7 @@ market_research:
   agent: market_analyst
   description: >
     Research the current competitive landscape related to the product goal: "{pm_goal}".\n
-    Step 1: Use SerperSearchTool to retrieve at least {max_urls} relevant URLs pointing to companies, tools, or platforms addressing similar needs.\n
+    Step 1: Use SerperSearchTool to retrieve at least 5 relevant URLs pointing to companies, tools, or platforms addressing similar needs.\n
     Step 2: Select the top {max_urls} URLs based strictly on relevance and product similarity.\n
     Step 3: Use ScrapeWebsiteTool to extract structured content from each selected URL.\n
     Step 4: For each competitor, summarize the following:
