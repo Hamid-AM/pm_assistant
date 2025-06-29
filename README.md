@@ -44,7 +44,7 @@ pm_assistant/
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/pm-assistant.git
-cd pm-assistant/src/pm_assistant
+cd pm-assistant
 ```
 
 ### 2. Create and activate a virtual environment
@@ -71,13 +71,13 @@ SERPER_API_KEY=your_serper_key
 
 ## Run the Assistant
 
-From the root `pm_assistant/` folder:
+From the root `src/pm_assistant/` folder:
 
 ```bash
 python main.py \
   --prompt "Explore the feasibility of adding AI features to Kapsul" \
-  --feedback "./knowledge/kapsul_user_feedback.md" \
-  --context "./knowledge/product_context.md"
+  --feedback "../../knowledge/kapsul_user_feedback.md" \
+  --context "../../knowledge/product_context.md"
 ```
 
 ## How It Works
